@@ -2,15 +2,6 @@
 #include <conio.h>
 using namespace std;
 
-int n;
-int arrayData[100];
-
-void tukar(int *a, int *b) {
-  int t = *a;
-  *a = *b;
-  *b = t;
-}
-
 void dMenu() {
     system("cls");
     cout << "Aplikasi Sorting Bubble\n";
@@ -22,63 +13,30 @@ void dMenu() {
     cout << "Masukkan angka : ";
 }
 
-
-void mMasukkanData() {
+void mMasukkanData(string pesan) {
     system("cls");
-    cout << "Menu Masukkan Data\n";
-    cout << "Masukkan jumlah data: ";
-    cin >> n;
-    cout << "Masukkan " << n << " angka:\n";
-    for (int i = 0; i < n; i++) {
-        cout << "Data ke-" << i + 1 << ": ";
-        cin >> arrayData[i];
-    }
+    cout << "hallo saya menu\n";
     getch();
 }
-
 
 void mTampilkanData() {
     system("cls");
     cout << "Menu Tampilkan Data\n";
-    if (n == 0) {
-        cout << "Data kosong.\n";
-    } else {
-        cout << "Data saat ini:\n";
-        for (int i = 0; i < n; i++) {
-            cout << arrayData[i] << " ";
-        }
-        cout << "\n";
-    }
+    // Tambahkan logika untuk menampilkan data di sini
     getch();
 }
-
 
 void mSortingAsc() {
     system("cls");
     cout << "Menu Sorting Ascending\n";
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = 0; j < n - i - 1; j++) {
-            if (arrayData[j] > arrayData[j + 1]) {
-                tukar(&arrayData[j], &arrayData[j + 1]);
-            }
-        }
-    }
-    cout << "Data berhasil diurutkan secara ascending.\n";
+    // Tambahkan logika sorting ascending di sini
     getch();
 }
-
 
 void mSortingDesc() {
     system("cls");
     cout << "Menu Sorting Descending\n";
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = 0; j < n - i - 1; j++) {
-            if (arrayData[j] < arrayData[j + 1]) {
-                tukar(&arrayData[j], &arrayData[j + 1]);
-            }
-        }
-    }
-    cout << "Data berhasil diurutkan secara descending.\n";
+    // Tambahkan logika sorting descending di sini
     getch();
 }
 
